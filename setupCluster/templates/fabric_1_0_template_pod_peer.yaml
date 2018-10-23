@@ -25,6 +25,8 @@ spec:
       - name: $podName 
         image: hyperledger/fabric-peer:x86_64-1.0.0
         env:
+        - name: CORE_PEER_ADDRESSAUTODETECT
+          value: "true"
         - name: CORE_LEDGER_STATE_STATEDATABASE
           value: "CouchDB"
         - name: CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS
