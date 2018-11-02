@@ -48,7 +48,7 @@ def runPeers(path):
 
 def checkAndRun(f):
 	if os.path.isfile(f):
-		os.system("kubectl create -f " + f)
+		os.system("kubectl create -f " + f + " --v=4")
 
 	else:
 		print("file %s no exited"%(f))
